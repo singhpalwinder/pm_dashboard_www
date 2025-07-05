@@ -26,3 +26,4 @@ yarn-error.log*
 /dist
 /www
 /www.zip
+copy_build.sh

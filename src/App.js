@@ -239,11 +239,11 @@ const App = () => {
   };
 
   if (theme === null) {
-    let _theme = window.localStorage.getItem("pm-dashboard-theme");
-    if (_theme === null) _theme = "light"; // default theme
+    let prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let _theme = prefersDark ? "dark" : "light";
     changeTheme(_theme);
   }
-
+  
   return (
     <ThemeProvider theme={theme || lightTheme}>
       <CssBaseline enableColorScheme />
