@@ -29,7 +29,7 @@ const ProcessorCard = (props) => {
   };
   const [processorChartAmount, setProcessorChartAmount] = useState(false);
   useEffect(() => {
-    let multiCore = JSON.parse(window.localStorage.getItem("multiCore") || "true");
+    let multiCore = JSON.parse(window.localStorage.getItem("multiCore") || "false");
     setProcessorChartAmount(multiCore);
   }, []);
   const handleProcessorChartChange = (e) => {
